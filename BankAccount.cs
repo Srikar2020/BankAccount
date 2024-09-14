@@ -4,6 +4,7 @@ public class AccountHolder
     public string LastName { get; set; }
     public DateTime DateofBirth { get; set; }
     public string Email { get; set; }
+    public int AccountHolderId {get; set; }
     public List<BankAccount> BankAccounts { get; set; }
     
 }
@@ -15,7 +16,7 @@ public class BankAccount
     public string AccountName { get; set; }
     public DateTime CreatedDate { get; set; }
     public string AccountType { get; set; }
-    public int AccountHolderID { get; set; }
+    public int AccountHolderId { get; set; }
     public AccountHolder AccountHolder { get; set; }
     
 }
@@ -34,7 +35,7 @@ public class Candidate
 
 public class Company
 {
-    public int CompanyID { get; set; }
+    public int CompanyId { get; set; }
     public string Name { get; set; }
     public string Location { get; set; }
     public string Industry { get; set; }
@@ -44,17 +45,17 @@ public class Company
 
 public class JobTitle
 {
-    public int JobTitleID { get; set; }
+    public int JobTitleId { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public int CompanyID { get; set; }
+    public int CompanyId { get; set; }
     public Company Company { get; set; }
     
 }
 
 public class Industry
 {
-    public int IndustryID { get; set; }
+    public int IndustryId { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public List<Company> Company { get; set; }
